@@ -2,7 +2,12 @@ const {user} = require('../../models')
 
 exports.getUser = async (req, res) => {
     try {
-        const getData = await user.findAll()
+        const getData = await user.findAll({
+            // attributes: ['name', 'email', 'umur', 'status']
+            // attributes: {
+            //     exclude: ['createdAt', 'updatedAt', 'password']
+            // }
+        })
         res.status(200).json({
             status: true,
             data: getData
