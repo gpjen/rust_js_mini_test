@@ -1,7 +1,7 @@
 //import
 const express = require('express')
 const morgan = require("morgan")
-const routers = require('./src/routes/user')
+const routers = require('./src/routes/index')
 
 const app = express()
 const port = 3005
