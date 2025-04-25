@@ -1,6 +1,10 @@
 mod satu;
 mod dua;
 mod tiga;
+mod kalkulator;
+
+use kalkulator::operation::{bagi, kali, kurang, tambah};
+
 
 fn main() {
 
@@ -84,5 +88,14 @@ fn main() {
     us_admin.print_info();
     us_user.print_info();
     us_member_gold.print_info();
+
+    // Modularisasi dengan mod, use, dan pub
+    println!("Hasil 5 + 8 = {}", tambah(5, 8));
+    println!("Hasil 5 - 8 = {}", kurang(5, 8));
+    println!("Hasil 5 x 8 = {}", kali(5, 8));
+    println!("Hasil 5 / 8 = {}", bagi(5, 8));
+
+    // Koleksi & Iterasi
+    dua::materi_korelasi_literasi();
 
 }
